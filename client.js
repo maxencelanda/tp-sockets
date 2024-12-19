@@ -17,7 +17,7 @@ const client = net.createConnection(PORT, "localhost", () => {
   client.write(response);
 });
 
-// Réception des réponses du serveur RPC
+// Réception des réponses du serveur RPC    
 client.on("data", (data) => {
   const response = data.toString();
 
