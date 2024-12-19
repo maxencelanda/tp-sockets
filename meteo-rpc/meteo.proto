@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package meteo;
+
+service MeteoService {
+    rpc GetMeteo(City) returns (MeteoInfos);
+}
+
+message City {
+    string name = 1;
+}
+
+message CityInfos{
+    string name = 1;
+    float latitude = 2;
+    float longitude = 3;
+}
+
+message MeteoInfos {
+    float temperature = 1;
+}
